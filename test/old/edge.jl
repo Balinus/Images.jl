@@ -74,7 +74,7 @@ facts("Edge") do
         @fact all(edges[nondiags] .== 0.0) --> true "test WDQfYZ"
 
         #Checks Hysteresis Thresholding
-        img = ones(Gray{U8}, (10, 10))
+        img = ones(Gray{N0f8}, (10, 10))
         img[3:7, 3:7] = 0.0
         img[4:6, 4:6] = 0.7
         thresholded = Images.hysteresis_thresholding(img, 0.9, 0.8)
